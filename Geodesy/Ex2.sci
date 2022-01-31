@@ -1,0 +1,9 @@
+B0=33.7366*%pi/180;L0=45*%pi/180
+r=230000000;A=120*%pi/180;H=45*%pi/180;
+X0=3694472.468;Y0=3694472.468;Z0=5194534.424;
+dxyz=[r*cos(H)*cos(A);r*cos(H)*sin(A);r*sin(H)]
+M=[-cos(L0)*sin(B0),-sin(L0),cos(B0)*cos(L0);
+	-sin(B0)*sin(L0),cos(L0),cos(B0)*sin(L0);
+	cos(B0),0,sin(B0)]
+dXYZ=M*dxyz
+dxyz2=inv(M)*dXYZ
