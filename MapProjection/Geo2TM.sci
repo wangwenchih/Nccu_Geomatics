@@ -48,6 +48,8 @@ function TM2=GeoToTM(lon,lat)
 	TM2=[E,N]*0.9999+[250000,0]
 endfunction
 
+
+
 PoCor=csvRead('E:\Homework\MapProjection\Geo_TM.csv',',')
 
 for point=1:14
