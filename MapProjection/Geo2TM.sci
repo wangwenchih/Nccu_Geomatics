@@ -37,9 +37,9 @@ function TM2=GeoToTM(lon,lat)
 	a2=r*sin(phi)/2
 	a3=r*cos(phi)^2*(1-tan(phi)^2+eta2)/6
 	a4=r*sin(phi)*cos(phi)^2*(5-tan(phi)^2+9*eta2+4*eta2^2)/24
-	a5=r*cos(phi)^4*(5-18*tan(phi)^2+tan(phi)^4+14*eta2-58*tan(phi)^2*eta2^2)/120
-	a6=r*sin(phi)*cos(phi)^4*(61-58*tan(phi)^2+tan(phi)^4)/720
-	a7=r*cos(phi)^6*(61-479+179*tan(phi)^4-tan(phi)^6)/5040
+	a5=r*cos(phi)^4*(5-18*tan(phi)^2+tan(phi)^4+14*eta2-58*tan(phi)^2*eta2)/120
+	a6=r*sin(phi)*cos(phi)^4*(61-58*tan(phi)^2+tan(phi)^4+270*eta2-330*tan(phi)^2*eta2)/720
+	a7=r*cos(phi)^6*(61-479*tan(phi)^2+179*tan(phi)^4-tan(phi)^6)/5040
 	a8=r*sin(phi)*cos(phi)^6*(1385-3111*tan(phi)^2+543*tan(phi)^4-tan(phi)^6)/40320
 
 	E=a1*lam+a3*lam^3+a5*lam^5+a7*lam^7
