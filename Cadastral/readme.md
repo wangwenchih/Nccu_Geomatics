@@ -1,6 +1,8 @@
 # 細部測量外業紀錄app
 ## 輸入全測站測得的細部點坐標，並展點於地圖，檢核是否存在錯誤，並存檔為csv
 https://gallery.appinventor.mit.edu/?galleryid=2bbc529d-25e1-4553-90db-ad5a7249c162
+<img src="https://user-images.githubusercontent.com/85786839/175773130-94ee1af9-c4c1-45fd-b3d8-956d586c053d.png" width=45%>
+<img src="https://user-images.githubusercontent.com/85786839/175773137-bcc009ed-0dd9-4965-a529-6acc9ce8b41f.png" width=45%>
 
 # 土地分割點坐標計算程式
 ## 輸入宗地界址點坐標、順序，並輸入分割面積條件，輸出分割點座標並驗算面積
