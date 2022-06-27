@@ -1,4 +1,3 @@
-
 import numpy as np
 from PIL import Image
 import pandas as pd
@@ -7,7 +6,7 @@ def ConfusionMatrix(GrndTruth,Classified):  #Rasterize_GrndTruth.tif,Classified.
     Clsf=np.asarray(Image.open(Classified))
     GTclasses={0:'water',1:'building',2:'forest'} 
     ClassTable={0:'water',1:'cloud',2:'building',3:'other',4:'forest',5:'forest',6:'other'} #All classes
-    VdDict={} #validation pixel's class and [col,row]
+    VdDict={} # class and [row,col] of validation pixel
     Class_Truth=[]
     Class_Predicted=[]
     for Gvalue in GTclasses:
