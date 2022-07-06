@@ -8,6 +8,9 @@ B0=45*%pi/180;L0=120*%pi/180;H0=2000; //Geodetic Coordinate in former Eillpsoid
 
 dx=2;dy=-125;dz=-51.9;da=a1-a;daa=aa1-aa;   //Difference between two   Reference Coordinate System (latter-former)
 
+N=a/(1-e2*sin(B0)^2)^0.5;
+M=a*(1-e2)/(1-e2*sin(B0)^2)^1.5
+
 Ji=[-sin(L0)/(N+H0)/cos(B0) , cos(L0)/(N+H0)/cos(B0) , 0		;
 	   -sin(B0)*cos(L0)/(M+H0) , -sin(B0)*sin(L0)/(M+H0) , cos(B0)/(M+H0);
 		cos(B0)*cos(L0)					  , cos(B0)*sin(L0)					  ,  sin(B0)]
@@ -25,8 +28,6 @@ LBH1=[L0 B0 H0]+dLBH';   //Geodetic Coordinate in latter Reference Coordinate Sy
 
 //transfrom two geodetic coordinate(LBH) to ECEF coordinate(XYZ) respectively
 
-N=a/(1-e2*sin(B0)^2)^0.5;
-M=a*(1-e2)/(1-e2*sin(B0)^2)^1.5
 X0=(N+H0)*cos(B0)*cos(L0);
 Y0=(N+H0)*cos(B0)*sin(L0);
 Z0=(N*(1-e2)+H0)*sin(B0);
