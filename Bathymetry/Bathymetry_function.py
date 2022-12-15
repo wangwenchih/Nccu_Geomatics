@@ -151,7 +151,7 @@ def execute():
     #繪製3D點雲
     _w1.progess.set('{}\nDrawing 3D point cloud...'.format(_w1.progess.get()))
     f= Figure(figsize=(30,12), dpi=50)
-    ax_f = f.gca(projection='3d')
+    ax_f = f.add_subplot(projection='3d')
     ax_f.view_init(20, 100)
     ax_f.set_box_aspect((2, 2, 0.5))
     sc=ax_f.scatter(df["E"], df["N"], df["H"] , c=df["H"] , cmap='jet')
